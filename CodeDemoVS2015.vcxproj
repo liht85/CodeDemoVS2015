@@ -198,6 +198,7 @@
   <ItemGroup>
     <ClInclude Include="CodeDemoVS2015.h" />
     <ClInclude Include="CodeDemoVS2015Dlg.h" />
+    <ClInclude Include="HttpHelp.h" />
     <ClInclude Include="MyThread.h" />
     <ClInclude Include="outputLogToFile.h" />
     <ClInclude Include="Thread.h" />
@@ -213,6 +214,7 @@
     <ClCompile Include="CLogger.cpp" />
     <ClCompile Include="CodeDemoVS2015.cpp" />
     <ClCompile Include="CodeDemoVS2015Dlg.cpp" />
+    <ClCompile Include="HttpHelp.cpp" />
     <ClCompile Include="MyThread.cpp" />
     <ClCompile Include="outputLogToFile.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>

@@ -54,6 +54,9 @@
     <ClInclude Include="MyThread.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HttpHelp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CodeDemoVS2015.cpp">
@@ -84,6 +87,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MyThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpHelp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
