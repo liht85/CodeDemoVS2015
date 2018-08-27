@@ -111,39 +111,10 @@ MyLog::MyLog()
 	}
 
 }
-// MyLog::MyLog(string strName)
-// {
-// 	InitializeCriticalSection(&m_cs);
-// 	m_hMutex = CreateMutexA(NULL, FALSE, strMutexName.c_str());
-// 	m_strFolderName = strName;
-// }
 MyLog::~MyLog()
 {
 	DeleteCriticalSection(&m_cs);
 }
-
-// void MyLog::Init(string strName)
-// {
-// 	m_strFolderName = strName;
-// 
-// 	time(&curTime);
-// 	localtime_s(&timeInfo, &curTime);
-// 	BOOL bRet = GetAppDataPath(szFilePath);
-// 	if (!bRet)
-// 	{
-// 		MessageBoxA(NULL, "1", "1", NULL);
-// 	}
-// 	strcat_s(szFilePath, sizeof(szFilePath) / sizeof(szFilePath[0]), "\\");
-// 	strcat_s(szFilePath, sizeof(szFilePath) / sizeof(szFilePath[0]), m_strFolderName.c_str());
-// 	strcat_s(szFilePath, sizeof(szFilePath) / sizeof(szFilePath[0]), "\\");
-// 	snprintf(szFileName, sizeof(szFileName), "%s%d%02d%02d.log", szFilePath, timeInfo.tm_year + 1900, timeInfo.tm_mon + 1, timeInfo.tm_mday);
-// 	
-// 	bRet = MakeSureDirectoryPathExists(szFilePath);	//  文件夹不存在 则创建  路径格式必须 以 \\  结尾 如：“  d:\\ddd1\\log\\ ”   
-// 	if (!bRet)
-// 	{
-// 		MessageBoxA(NULL, "2", "2", NULL);
-// 	}
-// }
 
 void MyLog::StartMutex(HANDLE hMutex)
 {
