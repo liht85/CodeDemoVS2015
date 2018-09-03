@@ -16,9 +16,7 @@ class MyLog
 {
 public:
 	MyLog();
-//	MyLog(string strName);
 	~MyLog();
-//	void Init(string strName);
 	void traceEX(BOOL bTAG, char *pFile, int iLineNumb, char *fmt, ...);
 private:
 	char szFilePath[MAX_PATH] = { 0 };
@@ -34,14 +32,3 @@ private:
 	void StopMutex(HANDLE hMutex);
 	
 };
-
-
-
-/*		//临界区  线程互斥
-CRITICAL_SECTION m_cs;
-InitializeCriticalSection(&m_cs);
-DeleteCriticalSection(&m_cs);
-
-EnterCriticalSection(&m_cs);
-LeaveCriticalSection(&m_cs);
-*/
