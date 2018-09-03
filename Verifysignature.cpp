@@ -12,7 +12,7 @@
 #include <Softpub.h>
 #pragma  comment(lib,"Wintrust.lib") 
 
-
+#define LENOVO_SIGNER_NAME L"Lenovo"
 
 BOOL VerifyTrust(LPCWSTR lpzFullModuleName, BOOL WithoutRevocationChecks) {
 	if (!PathFileExists(lpzFullModuleName))
