@@ -669,7 +669,7 @@ int cs_log_print_prefix(enum cs_log_level level, const char *func,
     return 0;
   }
 
-  strncpy(prefix, func, 20);
+  strncpy_s(prefix,21, func, 20);
   prefix[20] = '\0';
   if (cs_log_file == NULL) cs_log_file = stderr;
   cs_log_cur_msg_level = level;
@@ -820,7 +820,7 @@ DIR *opendir(const char *name) {
     to_wchar(name, wpath, ARRAY_SIZE(wpath));
     attrs = GetFileAttributesW(wpath);
     if (attrs != 0xFFFFFFFF && (attrs & FILE_ATTRIBUTE_DIRECTORY)) {
-      (void) wcscat(wpath, L"\\*");
+      (void) wcscat_s(wpath, MAX_PATH,L"\\*");
       dir->handle = FindFirstFileW(wpath, &dir->info);
       dir->result.d_name[0] = '\0';
     } else {
